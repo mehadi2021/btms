@@ -30,4 +30,14 @@ class BookingDetailsController extends Controller
     }
 
 
+
+    public function book($id){
+        $views = Booking::where('user_id',$id)->orderBy('id', 'DESC')
+        ->where('status','complete')
+        ->get();
+        return view('frontend.pages.view',compact('views'));
+
+    }
+
+
     }

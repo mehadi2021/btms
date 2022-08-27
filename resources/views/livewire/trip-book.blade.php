@@ -99,12 +99,12 @@
 <button wire:click="book"  type="submit" class="btn btn-primary btn-sm">Book Now  </button>
 
 
-<a href="{{route('booking.details')}}" class="btn btn-primary btn-sm">View Booking Details</a>
+<a href="{{route('booking.details')}}" class="btn btn-primary btn-sm">comfirm Booking Details</a>
 
 
 @else
 
-<a href="{{route('booking.details')}}" class="btn btn-primary btn-sm">View Booking Details </a>
+<a href="{{route('booking.view',auth()->user()->id)}}" class="btn btn-primary btn-sm">View Booking Details </a>
 
          @endif
 @else

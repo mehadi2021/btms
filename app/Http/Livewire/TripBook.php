@@ -43,11 +43,12 @@ class TripBook extends Component
     {
         $this->booked = Booking::where('date', $this->date)
             ->where('time', $this->time)
-
              ->get();
              $this->mehadi=Booking::where('user_id', auth()->user()->id)
             ->where('bus_id', $this->total)
             ->get();
+
+
         $this->seats = $this->trip->bus->seats;
     }
 
@@ -69,6 +70,7 @@ class TripBook extends Component
             }
         }
         Session::flash('message', 'Your Ticket Booked. Please complete the transaction,
-        otherwise, your booking may be pending');
+
+       otherwise, your booking may be pending');
     }
 }

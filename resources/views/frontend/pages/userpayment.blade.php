@@ -243,7 +243,7 @@
                     <div class="control-group">
                         <div class="controls">
                             @if($booking->status == 'complete')
-                            <a class="btn btn-success" href="{{route('view.info','3')}}">View</a>
+                            <a class="btn btn-success" href="{{route('view.info',auth()->user()->id)}}">View</a>
                             @else
                           <button type="submit" class="btn btn-danger" >Pay Now</button>
                             @endif

@@ -71,7 +71,7 @@
                                             <b>Bus Type:</b> {{ ucfirst($trip->bus->bus_type) }}
                                         </p>
 
-@if($books->count()<60)
+@if($books->count()<40)
                                         <a href="{{ route('frontend.bookTrip', $trip->id) }}" class="btn btn-primary btn-sm">Book Now{{ $books->count() }}</a>
 
 

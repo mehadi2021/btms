@@ -40,6 +40,7 @@ Route::get('/reserve/form', [HomeController::class, 'reserveForm'])->name('front
 Route::get('/trip', [HomeController::class, 'showTrip'])->name('frontend.showTrip');
 Route::get('/trip/{id}', [HomeController::class, 'bookTrip'])->name('frontend.bookTrip')->middleware('auth');
 Route::get('/booking/details',[BookingDetailsController::class,'bookingdetails'])->name('booking.details');
+Route::get('/booking/view/{id}',[BookingDetailsController::class,'book'])->name('booking.view');
 
 
  Route::get('/booking/delete/{id}',[BookingController::class,'cancle'])->name('booking.delete');
